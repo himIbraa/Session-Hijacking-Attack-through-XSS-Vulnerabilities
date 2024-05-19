@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Feed Page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link your CSS file -->
+  </head>
+  <body>
+    <!-- navbar containing the user name from firebase auth -->
+    <nav>
+      <h1 id="user-name"></h1>
+
+      <button onclick="logout()">Logout</button>
+    </nav>
+    <div class="container">
+    <h1>Add Post</h1>
+    <form id="post-form">
+      <div class="form-group">
+        <label for="post-title">Post Title</label>
+        <input
+          type="text"
+          id="post-title"
+          class="form-control"
+          placeholder="Enter post title"
+        />
+      </div>
+      <div class="form-group">
+        <label for="post-content">Post Content</label>
+        <textarea
+          id="post-content"
+          class="form-control"
+          placeholder="Enter post content"
+        ></textarea>
+      </div>
+      <button type="submit" onclick="handleAddPost()">Add Post</button>
+    </form>
+    <a href="allPosts.html">See All Posts</a>
+  </div>
+
+    <div id="posts-container">
+      <!-- Posts will be dynamically added here -->
+    </div>
+  </body>
+</html>
+<script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-auth.js"></script>
+<script src="firebase-config.js"></script>
+<script type="text/javascript" src="managePosts.js"></script>
+<script type="text/javascript" src="login.js"></script>

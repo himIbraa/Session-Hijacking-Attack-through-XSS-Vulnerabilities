@@ -1,0 +1,17 @@
+{
+  "name": "XSS_sessionHijackingAttack",
+  "version": "1.0.0",
+  "description": "A project for demonstrating session hijacking attacks.",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server ./",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "firebase": "^8.2.0",
+    "http-server": "^0.12.3"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
+}
