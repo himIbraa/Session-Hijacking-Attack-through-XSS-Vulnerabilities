@@ -1,10 +1,10 @@
-#XSS Session Hijacking Attack
+# XSS Session Hijacking Attack
 This project demonstrates session hijacking attacks using Cross-Site Scripting (XSS). The application uses Firebase for authentication and Firestore for data storage.
 
-##Prerequisites
+## Prerequisites
 Node.js and npm installed on your system.
 Firebase project setup with Firestore and Authentication enabled.
-##Installation
+## Installation
 1. Clone the repository:
 ```
 git clone https://github.com/your-repo/xss-session-hijacking-attack.git](https://github.com/himIbraa/Session-Hijacking-Attack-through-XSS-Vulnerabilities
@@ -17,7 +17,7 @@ cd xss-session-hijacking-attack
 ```
 npm install
 ```
-##Firebase Configuration
+## Firebase Configuration
 
 1. Create a Firebase project at Firebase Console.
 
@@ -40,24 +40,24 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 const auth = firebase.auth();
 ```
-##Running the Project
+## Running the Project
 1. Start the server:
 ```
 npm start
 ```
 2. Open your browser and navigate to http://localhost:8080.
-##Project Usage
+## Project Usage
 1. Login and Signup: Users can sign up and log in to the application through the login.html page.
 2. Add Posts: Logged-in users can add posts on the main feed page (index.html).
 3. View Posts: All posts are displayed on the allPosts.html page.
 4. Comments: Users can add comments to posts, which are displayed on the comments.html page.
-##Dependencies
+## Dependencies
 - Firebase: Used for authentication and Firestore database.
 - http-server: A simple, zero-configuration command-line HTTP server.
-##XSS Vulnerability
+## XSS Vulnerability
 This project is intentionally vulnerable to Cross-Site Scripting (XSS) session hijacking attacks. An attacker can inject malicious scripts into the comments section, which can steal session cookies and hijack user sessions.
 
-###How to Perform the Attack
+### How to Perform the Attack
 1. Post a Malicious Comment: An attacker can post a comment containing a script to steal cookies. For example:
 ```
 <script>
